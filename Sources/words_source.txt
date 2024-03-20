@@ -1,0 +1,1 @@
+https://github.com/MikhaD/wordle/blob/main/src/words_5.ts
