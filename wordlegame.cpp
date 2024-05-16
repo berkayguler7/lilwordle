@@ -15,8 +15,8 @@ WordleGame::WordleGame(QObject *parent) : QObject(parent)
 
 QString WordleGame::selectTargetWord(const QStringList& words)
 {
-    qsrand(QTime::currentTime().msec());
-    int index = qrand() % words.size();
+    srand(QTime::currentTime().msec()); // qsrand changed to srand while migrating 5.14 - 6.7
+    int index = rand() % words.size(); // qrand changed to rand while migrating 5.14 - 6.7
     return words.at(index);
 }
 
